@@ -1,0 +1,20 @@
+{
+  "name": "JSAPI-Testing",
+  "version": "1.0.0",
+  "description": "API testing framework with Javascript",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Jacopo F.",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/register": "^7.12.1",
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1",
+    "supertest": "^6.0.1"
+  },
+  "dependencies": {}
+}
