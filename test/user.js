@@ -32,10 +32,9 @@ describe('Users', () => {
                  name: "Jackson Ville",
                  status: "Active",
                  gender: "Male",
-                 email: "testJacoposh" + randomNumberGenerator() + "@testK" + randomNumberGenerator() + ".com"
+                 email: "testJacoposh" + randomNumberGenerator(800) + "@testK" + randomNumberGenerator(800) + ".com"
              })
              .then((res, err) => {
-                 console.log(res.body);
                  res.body.code.should.equal(201);
              })
      });
