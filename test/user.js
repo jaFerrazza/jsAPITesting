@@ -3,7 +3,7 @@ import { should } from 'chai';
 const request = supertest('https://gorest.co.in/public-api/'); 
 
 
-const token = '373155858c80392d00c4fb3840bca09f0b569928d5c70dc13e94707b7b48bc80' || process.env.ADMINTOKEN;
+const token = '' || process.env.ADMINTOKEN;
 
 
 const randomNumberGenerator = max => {
