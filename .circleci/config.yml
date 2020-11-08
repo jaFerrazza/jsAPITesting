@@ -1,7 +1,21 @@
 version: 2.1
-orbs:
-  node: circleci/node@3.0.0
+jobs:
+  test:
+    docker:
+      - image: circleci/node
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - app-dependencies-{{ .Environment.CACHE_VERSION }}-{{ checksum "package.json" }}
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: app-dependencies-{{ .Environment.CACHE_VERSION }}-{{ checksum "package.json" }}
+      - run: yarn run test
+
 workflows:
   node-tests:
     jobs:
-      - node/test
+      - test
